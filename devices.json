@@ -1,6 +1,6 @@
 {
-  "schlafzimmer": {
-    "name": "Schlafzimmer",
+  "till": {
+    "name": "Schlafzimmer Till",
     "devices": {
       "roll_ost_gross": {
         "name": "Jalousie Osten Gross",

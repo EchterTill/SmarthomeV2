@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Smarthome</title>
     <script src="calls.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php
