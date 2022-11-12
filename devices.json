@@ -1,0 +1,53 @@
+{
+  "schlafzimmer": {
+    "name": "Schlafzimmer",
+    "devices": {
+      "roll_ost_gross": {
+        "name": "Jalousie Osten Gross",
+        "ip": "192.168.0.212",
+        "type": "shelly.roller",
+        "index": 0
+      },
+      "roll_sued_gross": {
+        "name": "Jalousie Sueden Gross",
+        "ip": "192.168.0.213",
+        "type": "shelly.roller",
+        "index": 0
+      }
+    }},
+
+
+  "wohnzimmer": {
+    "name": "Wohnzimmer",
+    "devices": {
+      "roll_sued_gross": {
+        "name": "Jalousie Sueden Gross",
+        "ip": "192.168.0.221",
+        "type": "shelly.roller",
+        "index": 0
+      },
+      "roll_west_gross": {
+        "name": "Jalousie Westen Gross",
+        "ip": "192.168.0.223",
+        "type": "shelly.roller",
+        "index": 0
+      }
+  }},
+  "außen": {
+    "name": "Außen",
+    "devices": {
+      "light_east": {
+        "name": "Außenbeleuchtung Ost",
+        "ip": "192.168.0.47",
+        "type": "shelly.relay",
+        "index": 0
+      },
+      "light_west": {
+        "name": "Außenbeleuchtung West",
+        "ip": "192.168.0.47",
+        "type": "shelly.relay",
+        "index": 1
+      }
+    }
+  }
+}
