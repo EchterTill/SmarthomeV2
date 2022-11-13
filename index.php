@@ -17,19 +17,22 @@ function newline(){
 
 
 $devicetypes = [
-    "shelly.roller" => function ($ip, $index) {
-        echo "<button onclick='Roller.open(`".$ip."`, ".$index.")' >Jalousie hoch</button>";
+    "shelly.roller" => function ($device) {
+        echo "<button onclick='Roller.open(`".$device->ip."`, ".$device->index.")' >Jalousie hoch</button>";
         newline();
-        echo "<button onclick='Roller.close(`".$ip."`, ".$index.")' >Jalousie runter</button>";
+        echo "<button onclick='Roller.close(`".$device->ip."`, ".$device->index.")' >Jalousie runter</button>";
         newline();
     },
-    "shelly.relay" => function ($ip, $index) {
-        echo "<button onclick='Relay.on(`".$ip."`, ".$index.")' >Licht an</button>";
+    "shelly.relay" => function ($device) {
+        echo "<button onclick='Relay.on(`".$device->ip."`, ".$device->index.")' >Licht an</button>";
         newline();
-        echo "<button onclick='Relay.off(`".$ip."`, ".$index.")' >Licht aus</button>";
+        echo "<button onclick='Relay.off(`".$device->ip."`, ".$device->index.")' >Licht aus</button>";
         newline();
-        echo "<button onclick='Relay.toggle(`".$ip."`, ".$index.")' >Licht umschalten</button>";
+        echo "<button onclick='Relay.toggle(`".$device->ip."`, ".$device->index.")' >Licht umschalten</button>";
         newline();
+    },
+    "shelly.dimmer" => function ($device) {
+        echo("<div id='".$device->ip."-".$device->index."'><script>dimmer('".$device->ip."', '".$device->index."')</script></div>");
     }
 ];
 
@@ -45,7 +48,7 @@ foreach ($devices as $room) {
         newline();
 
         if (key_exists($device->type, $devicetypes)) {
-            $devicetypes[$device->type]($device->ip, $device->index);
+            $devicetypes[$device->type]($device);
         } else {
             echo("Der Gerätetyp <i>".$device->type."</i> existiert nicht...");
         }

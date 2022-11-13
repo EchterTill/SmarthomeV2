@@ -17,8 +17,8 @@
     }},
 
 
-  "wohnzimmer": {
-    "name": "Wohnzimmer",
+  "spielzimmer": {
+    "name": "Spielzimmer",
     "devices": {
       "roll_sued_gross": {
         "name": "Jalousie Sueden Gross",
@@ -47,6 +47,17 @@
         "ip": "192.168.0.47",
         "type": "shelly.relay",
         "index": 1
+      }
+    }
+  },
+  "wohnzimmer": {
+    "name": "Wohnzimmer",
+    "devices": {
+      "deckenlicht": {
+        "name": "Deckenlicht",
+        "ip": "192.168.0.147",
+        "type": "shelly.dimmer",
+        "index": 0
       }
     }
   }
