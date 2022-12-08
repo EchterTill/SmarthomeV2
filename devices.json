@@ -17,8 +17,8 @@
     }},
 
 
-  "spielzimmer": {
-    "name": "Spielzimmer",
+  "wz_oben": {
+    "name": "Wohnzimmer Oben",
     "devices": {
       "roll_sued_gross": {
         "name": "Jalousie Sueden Gross",
