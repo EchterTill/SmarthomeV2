@@ -8,15 +8,6 @@ function call(api_call) {
 }
 
 
-class Roller {
-    static open(ip, index) {
-        call(`http://${ip}/roller/${index}?go=open`)
-    }
-    static close(ip, index) {
-        call(`http://${ip}/roller/${index}?go=close`)
-    }
-}
-
 class Relay {
     static toggle(ip, index) {
         call(`http://${ip}/relay/${index}?turn=toggle`)

@@ -18,17 +18,17 @@ function newline(){
 
 $devicetypes = [
     "shelly.roller" => function ($device) {
-        echo "<button onclick='Roller.open(`".$device->ip."`, ".$device->index.")' >Jalousie hoch</button>";
+        echo "<button onclick='Control.Shelly.Roller.open(`".$device->ip."`, ".$device->index.")' >Jalousie hoch</button>";
         newline();
-        echo "<button onclick='Roller.close(`".$device->ip."`, ".$device->index.")' >Jalousie runter</button>";
+        echo "<button onclick='Control.Shelly.Roller.close(`".$device->ip."`, ".$device->index.")' >Jalousie runter</button>";
         newline();
     },
     "shelly.relay" => function ($device) {
-        echo "<button onclick='Relay.on(`".$device->ip."`, ".$device->index.")' >Licht an</button>";
+        echo "<button onclick='Control.Shelly.Relay.on(`".$device->ip."`, ".$device->index.")' >Licht an</button>";
         newline();
-        echo "<button onclick='Relay.off(`".$device->ip."`, ".$device->index.")' >Licht aus</button>";
+        echo "<button onclick='Control.Shelly.Relay.off(`".$device->ip."`, ".$device->index.")' >Licht aus</button>";
         newline();
-        echo "<button onclick='Relay.toggle(`".$device->ip."`, ".$device->index.")' >Licht umschalten</button>";
+        echo "<button onclick='Control.Shelly.Relay.toggle(`".$device->ip."`, ".$device->index.")' >Licht umschalten</button>";
         newline();
     },
     "shelly.dimmer" => function ($device) {
@@ -53,7 +53,6 @@ foreach ($devices as $room) {
             echo("Der Gerätetyp <i>".$device->type."</i> existiert nicht...");
         }
     }
-
 
 }
 
